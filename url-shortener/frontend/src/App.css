@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f5f5;
+}
+
+.app-shell {
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.card {
+  background: #fff5;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  padding: 16px 20px;
+}
+
+.button-shorten {
+  background: #244998;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-shorten:hover {
+  background: #1d4ed8;
+}

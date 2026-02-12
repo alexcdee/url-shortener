@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+env/
+venv/
+.env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Django / project files
+db.sqlite3
+db.sqlite3-journal
+*.log
+local_settings.py
+
+# Misc
+*.sqlite3

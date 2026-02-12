@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 260px 480px;
+    }
+  </style>
+<body>
+    <h1>URL Shortener</h1>    
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="url" name="url" placeholder="https://example.com" required>
+        <button type="submit">Shorten</button>
+    </form>
+
+    <h2>Your links:</h2>
+    <ul>
+      {% for item in data %}
+        <li>
+          Original: {{ item.url }} <br>
+          Short:
+          <a href="/{{ item.slug }}" target="_blank">
+            {{ request.build_absolute_uri }}{{ item.slug }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    
+</body>
+</html>
